@@ -1,0 +1,57 @@
+<user-mapping>
+
+    <!-- Per-user authentication and config information -->
+
+    <!-- A user using md5 to hash the password
+         guacadmin user and its md5 hashed password below is used to 
+             login to Guacamole Web UI-->
+    <!-- FIRST USER -->
+    <authorize 
+            username="GeeksAdmin"
+            password="8c908f85eaafc5d53e98d5a9b1a5dcbd"
+            encoding="md5">
+
+        <!-- Second authorized Remote connection -->
+        <connection name="RHEL 7 Maipo">
+            <protocol>ssh</protocol>
+            <param name="hostname">172.25.169.26</param>
+            <param name="port">22</param>
+        </connection>
+
+        <!-- Second authorized remote connection -->
+        <connection name="Windows Server 2019">
+            <protocol>rdp</protocol>
+            <param name="hostname">10.10.10.5</param>
+            <param name="port">3389</param>
+            <param name="username">tech</param>
+            <param name="ignore-cert">true</param>
+        </connection>
+
+    </authorize>
+
+    <!-- SECOND USER -->
+
+    <authorize 
+            username="TechAdmin"
+            password="9b0de49c13ff689c921e13d27a5b25fb"
+            encoding="md5">
+
+
+        <!-- First authorized remote connection -->
+        <connection name="Windows Server 2019">
+            <protocol>rdp</protocol>
+            <param name="hostname">10.10.10.5</param>
+            <param name="port">3389</param>
+            <param name="username">tech</param>
+            <param name="ignore-cert">true</param>
+        </connection>
+        <!-- Second authorized Remote connection -->
+        <connection name="RHEL 7 Maipo">
+            <protocol>ssh</protocol>
+            <param name="hostname">172.25.169.26</param>
+            <param name="port">22</param>
+        </connection>
+
+    </authorize>
+
+</user-mapping>
