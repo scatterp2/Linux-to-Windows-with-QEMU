@@ -10,4 +10,4 @@ echo Your VNC IP Address:
 echo "Note: Use Right-Click Or Ctrl+C To Copy"
 echo "Please Keep Colab Tab Open, Maximum Time 12h"
 echo Script by fb.com/thuong.hai.581
-sudo qemu-system-x86_64 -vnc :0 -hda litexp.qcow2  -smp cores=2  -m 8192M -machine usb=on -device usb-tablet > /dev/null 2>&1
+sudo qemu-system-x86_64 -vnc :0 -hda litexp.qcow2  -smp cores=2  -m 8192M -machine usb=on -device usb-tablet -monitor stdio
