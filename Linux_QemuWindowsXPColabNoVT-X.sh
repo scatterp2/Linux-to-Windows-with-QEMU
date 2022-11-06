@@ -1,3 +1,4 @@
+2H6NlmFhnmZloRis5U370qB4Cwh_2aYJN8Z4mRhqw6kdnc7hD
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
