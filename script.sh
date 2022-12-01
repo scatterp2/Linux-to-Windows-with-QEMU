@@ -7,6 +7,8 @@ grep -rl yacy . | xargs sed -i 's/yacy/aeon/g'
 grep -rl yacy .
 find . -name "*yacy*" -print|xargs rename  's/yacy/aeon/' 
 find . -name "*yacy*" -print|rename  's/yacy/aeon/' 
+find . -name "*yacy*" -print|xargs rename  's/yacy/aeon/' 
+find . -name "*yacy*" -print|rename  's/yacy/aeon/' 
 echo "done renaming###############################################################################################"
 find . -name "*yacy*" -print
 grep -rl yacy .
