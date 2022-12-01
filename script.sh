@@ -5,11 +5,11 @@ sudo dpkg --configure -a &>/dev/null
 sudo apt-get install -y openjdk-8-jre-headless &>/dev/null
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz &>/dev/null
 tar xfz yacy_v1.924_20210209_10069.tar.gz &>/dev/null
-echo "stage 1"
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1 &>/dev/null
+echo "stage 0"
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1 
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1 
 ./ngrok authtoken 2H6NlmFhnmZloRis5U370qB4Cwh_2aYJN8Z4mRhqw6kdnc7hD &>/dev/null
-echo Please wait for installing... &>/dev/null
+echo "stage 1"
 ./yacy/startYACY.sh &>/dev/null
 wget https://pastebin.com/raw/HXsT06n1 &>/dev/null
 sleep 15s 
