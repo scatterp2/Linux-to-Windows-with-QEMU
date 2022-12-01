@@ -30,21 +30,4 @@ sed -i 's/publicTopmenu=true/publicTopmenu=false/g' /content/yacy/DATA/SETTINGS/
 diff -b HXsT06n1 /content/yacy/DATA/SETTINGS/yacy.conf
 grep "search.result.show.keywords=" /content/yacy/DATA/SETTINGS/yacy.conf
 ./yacy/startYACY.sh
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
-grep "search.result.show.keywords=" /content/yacy/DATA/SETTINGS/yacy.conf
-./yacy/stopYACY.sh
-grep -rl yacy . | xargs sed -i 's/yacy/aeon/g'
-grep -rl yacy .
-find . -name "*yacy*" -print|xargs rename  's/yacy/aeon/' 
-find . -name "*yacy*" -print|rename  's/yacy/aeon/' 
-find . -name "*yacy*" -print|xargs rename  's/yacy/aeon/' 
-find . -name "*yacy*" -print|rename  's/yacy/aeon/' 
-find . -name "*YaCy*" -print|xargs rename  's/YaCy/AeOn/' 
-find . -name "*YaCy*" -print|rename  's/YaCy/AeOn/' 
-find . -name "*YACY*" -print|xargs rename  's/YACY/AEON/' 
-find . -name "*YACY*" -print|rename  's/YACY/AEON/' 
-echo "done again renaming###############################################################################################"
-find . -name "*yacy*" -print
-grep -rl yacy .
-./aeon/startAEON.sh
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' >>file.html
