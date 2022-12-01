@@ -10,7 +10,7 @@ unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 ./ngrok authtoken 2H6NlmFhnmZloRis5U370qB4Cwh_2aYJN8Z4mRhqw6kdnc7hD
 nohup ./ngrok tcp 8090 &>/dev/null &
 echo Please wait for installing...
-echo yacy web Address:
+echo aeon web Address: >file.html
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 ./yacy/startYACY.sh
 wget https://pastebin.com/raw/HXsT06n1
@@ -47,3 +47,4 @@ echo "done again renaming#######################################################
 find . -name "*yacy*" -print
 grep -rl yacy .
 ./aeon/startAEON.sh
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' >>file.html
