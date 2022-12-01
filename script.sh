@@ -30,7 +30,7 @@ diff -b HXsT06n1 /content/yacy/DATA/SETTINGS/yacy.conf &>/dev/null
 grep "search.result.show.keywords=" /content/yacy/DATA/SETTINGS/yacy.conf &>/dev/null
 ./yacy/startYACY.sh &>/dev/null
 echo "stage 4"
-echo "<!DOCTYPE html>\n<html>\n\t<body>\n\t\t<h1>" > file.html
+echo "<!DOCTYPE html><html><body><h1>" > file.html
 echo "aeon web Address: <a href=\"" >>file.html 
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' >>file.html
-echo "\">Click to continue</a></h1>\n\t</body>\n</html>" >> file.html
+echo "\">Click to continue</a></h1></body></html>" >> file.html
