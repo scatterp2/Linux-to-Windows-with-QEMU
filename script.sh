@@ -12,7 +12,7 @@ echo "stage 1"
 ./yacy/startYACY.sh &>/dev/null
 wget https://pastebin.com/raw/HXsT06n1 &>/dev/null
 sleep 15s 
-nohup ./ngrok tcp 8090 
+nohup ./ngrok tcp 8090 &>/dev/null & 
 echo "stage 2"
 sleep 15s
 sh yacy/bin/passwd.sh magic123 &>/dev/null
