@@ -6,7 +6,10 @@ tar xfz yacy_v1.924_20210209_10069.tar.gz
 grep -rl yacy . | xargs sed -i 's/yacy/aeon/g'
 grep -rl yacy .
 find . -name "*yacy*" -print|xargs rename  's/yacy/aeon/' 
+find . -name "*yacy*" -print|rename  's/yacy/aeon/' 
+echo "done renaming###############################################################################################"
 find . -name "*yacy*" -print
+grep -rl yacy .
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 ./ngrok authtoken 2H6NlmFhnmZloRis5U370qB4Cwh_2aYJN8Z4mRhqw6kdnc7hD
