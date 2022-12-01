@@ -1,5 +1,6 @@
 sudo apt-get update
 sudo apt-get install screen
+screen -d -m python -m http.server 8000
 sudo dpkg --configure -a
 sudo apt-get install -y openjdk-8-jre-headless
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
@@ -47,3 +48,5 @@ grep "search.result.show.keywords=" /content/aeon/DATA/SETTINGS/aeon.conf
 ./aeon/startAEON.sh
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 grep "search.result.show.keywords=" /content/aeon/DATA/SETTINGS/aeon.conf
+echo yacy web Address: >file.html
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' >>file.html
