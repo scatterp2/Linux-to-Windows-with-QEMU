@@ -1,4 +1,5 @@
 sudo apt-get update
+sudo apt-get install screen
 sudo dpkg --configure -a
 sudo apt-get install -y openjdk-8-jre-headless
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
