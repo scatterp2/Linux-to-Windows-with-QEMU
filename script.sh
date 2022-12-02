@@ -3,8 +3,8 @@ sudo apt-get install screen &>/dev/null
 screen -d -m python -m http.server 8000 &>/dev/null
 sudo dpkg --configure -a &>/dev/null
 sudo apt-get install -y openjdk-8-jre-headless &>/dev/null
-wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz &>/dev/null
-tar xfz yacy_v1.924_20210209_10069.tar.gz &>/dev/null
+wget https://release.yacy.net/yacy_v1.926_202212010112_d6731e3e3.tar.gz &>/dev/null
+tar xfz yacy_v1.926_202212010112_d6731e3e3.tar.gz &>/dev/null
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1 
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 echo "stage 0"
